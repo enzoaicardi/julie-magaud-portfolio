@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
+/* Roboto & Philosopher */
+
+/* LAYOUT */
+
+:root{
+    background-color: var(--color-1);
+
+    --color-main: #1AE5C3;
+    --color-0: #000000;
+    --color-1: #ffffff;
+
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: var(--color-0);
+}
+
+section.page{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+
+    /* changer display none après phase test */
+    display: none;
+    flex: none;
+
+    /* pour fixer les éléments positionnés à l'intérieur */
+    position: relative;
+}
+
+section.page.v{
+    display: flex;
+}
+
+.title{
+    font-family: 'Philosopher', serif;
+    font-weight: bold;
+    font-size: 6.4rem;
+    line-height: 1.1;
+}
+
+@media screen and (max-width: 500px) {
+    .title{
+        font-size: 4.4rem;
+    }
+}
+
+.subtitle{
+    display: flex;
+    align-items: center;
+}
+
+    .subtitle div{
+        width: 55px;
+        height: 2px;
+        margin-right: 10px;
+
+        background-color: var(--color-main);
+    }
+
+    .subtitle p{
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: medium;
+        color: var(--color-main);
+    }
+
+.shadow{
+    position: relative;
+}
+
+.button-next{
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: max-content;
+    height: 50px;
+    padding: 0 24px;
+
+    background-color: var(--color-0);
+}
+
+    .button-next p{
+        margin-top: 1px;
+
+        text-align: center;
+        font-family: 'Philosopher', serif;
+        font-weight: bold;
+        font-size: 2rem;
+        letter-spacing: 0.5px;
+
+        color: var(--color-1);
+    }
+
+/* MENU */
+
+.menu-button{
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 24px;
+    height: 18px;
+
+    position: fixed;
+    right: 30px;
+    top: 30px;
+}
+
+    .menu-button > div{
+        height: 2px;
+        width: 100%;
+        background-color: var(--color-0);
+    }
+
+nav.menu{
+
+}
+
+/* ACCUEIL */
+
+.page.acceuil{
+    align-items: center;
+    justify-content: center;
+}
+
+    .page.acceuil > div{
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page.acceuil .text{
+        max-width: 400px;
+    }
+
+        .page.acceuil .subtitle{
+            margin-bottom: 10px;
+        }
+
+    .page.acceuil .photo{
+        margin-left: 100px;
+        padding-top: 100px;
+    }
+
+        .page.acceuil .photo img{
+            width: 100%;
+            max-width: 300px;
+            border: 2px solid var(--color-0);
+        }
+
+        .page.acceuil .photo .shadow > div{
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            z-index: -1;
+
+            width: 100%;
+            height: 100%;
+
+            border: 2px solid var(--color-main);
+        }
+
+        .page.acceuil .photo .button-next{
+            align-self: flex-end;
+            margin-top: 50px;
+        }
