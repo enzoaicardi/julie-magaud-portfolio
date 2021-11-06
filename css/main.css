@@ -9,8 +9,17 @@
     --color-main: #1AE5C3;
     --color-0: #000000;
     --color-1: #ffffff;
+    --color-2: #c4c4c4;
+    --color-3: #e5e5e5;
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+    --roboto: 'Roboto', Arial, Helvetica, sans-serif;
+    --philosopher: 'Philosopher', serif;
+    /* head-margin: 100px (84+16) 0 70px (54+16) 0 */
+    /* section-margin: 60px */
 
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: var(--roboto);
     color: var(--color-0);
 }
 
@@ -22,25 +31,51 @@ section.page{
     /* changer display none après phase test */
     display: none;
     flex: none;
+    flex-direction: column;
 
     /* pour fixer les éléments positionnés à l'intérieur */
     position: relative;
+    background-color: var(--color-1);
 }
 
 section.page.v{
     display: flex;
 }
 
+    section.page > main{
+        display: flex;
+        flex-direction: column;
+
+        width: 70%;
+        max-width: 920px;
+    }
+
+.p{
+    line-height: 1.6;
+    display: block;
+}
+
+    .p.u::first-letter{
+        font-size: 5rem;
+        line-height: 1;
+        float: left;
+        margin-right: 10px;
+    }
+
 .title{
-    font-family: 'Philosopher', serif;
-    font-weight: bold;
+    font-family: var(--philosopher);
+    font-weight: var(--bold);
     font-size: 6.4rem;
     line-height: 1.1;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1020px) {
     .title{
         font-size: 4.4rem;
+    }
+
+    section.page > main{
+        width: 90%;
     }
 }
 
@@ -58,14 +93,23 @@ section.page.v{
     }
 
     .subtitle p{
-        font-family: 'Roboto', Arial, Helvetica, sans-serif;
-        font-size: 16px;
-        font-weight: medium;
+        font-family: var(--roboto);
+        font-size: 1.6rem;
+        font-weight: var(--medium);
         color: var(--color-main);
+    }
+
+    .subtitle.variant p{
+        color: var(--color-2);
+    }
+
+    .subtitle.variant div{
+        background-color: var(--color-2);
     }
 
 .shadow{
     position: relative;
+    z-index: 10;
 }
 
 .button-next{
@@ -82,16 +126,49 @@ section.page.v{
     background-color: var(--color-0);
 }
 
+    .button-next.variant{
+        background-image: linear-gradient(to right, var(--color-main) 0%, var(--color-main) 100%);
+        background-repeat: no-repeat;
+        background-position: -180px 0;
+        background-color: var(--color-1);
+        border: 2px solid var(--color-0);
+
+        transition: 400ms ease;
+    }
+
+    .button-next.variant:hover{
+        background-position: 0 0;
+    }
+
     .button-next p{
         margin-top: 1px;
 
         text-align: center;
-        font-family: 'Philosopher', serif;
-        font-weight: bold;
+        font-family: var(--philosopher);
+        font-weight: var(--bold);
         font-size: 2rem;
         letter-spacing: 0.5px;
 
         color: var(--color-1);
+    }
+
+    .button-next.variant p{
+        color: var(--color-0);
+    }
+
+    .button-next svg{
+        width: 22px;
+        height: 22px;
+        margin-left: 10px;
+        margin-top: 4px;
+
+        fill: var(--color-1);
+
+        /* background-color: red; */
+    }
+
+    .button-next.variant svg{
+        fill: var(--color-0);
     }
 
 /* MENU */
@@ -107,9 +184,11 @@ section.page.v{
     width: 24px;
     height: 18px;
 
-    position: fixed;
+    position: absolute;
     right: 30px;
     top: 30px;
+
+    z-index: 100;
 }
 
     .menu-button > div{
@@ -121,52 +200,3 @@ section.page.v{
 nav.menu{
 
 }
-
-/* ACCUEIL */
-
-.page.acceuil{
-    align-items: center;
-    justify-content: center;
-}
-
-    .page.acceuil > div{
-        height: max-content;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .page.acceuil .text{
-        max-width: 400px;
-    }
-
-        .page.acceuil .subtitle{
-            margin-bottom: 10px;
-        }
-
-    .page.acceuil .photo{
-        margin-left: 100px;
-        padding-top: 100px;
-    }
-
-        .page.acceuil .photo img{
-            width: 100%;
-            max-width: 300px;
-            border: 2px solid var(--color-0);
-        }
-
-        .page.acceuil .photo .shadow > div{
-            position: absolute;
-            top: -30px;
-            left: -30px;
-            z-index: -1;
-
-            width: 100%;
-            height: 100%;
-
-            border: 2px solid var(--color-main);
-        }
-
-        .page.acceuil .photo .button-next{
-            align-self: flex-end;
-            margin-top: 50px;
-        }

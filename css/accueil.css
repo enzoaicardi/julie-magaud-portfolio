@@ -1,0 +1,215 @@
+.page.accueil{
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(to bottom, var(--color-2) 84px, transparent 84px);
+}
+
+    .page.accueil main{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page.accueil main > div{
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* text */
+
+    .page.accueil .text{
+        position: relative;
+        max-width: 400px;
+        overflow: hidden;
+    }
+
+        .page.accueil .text .bio{
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+            top: 100%;
+
+            background-color: var(--color-1);
+            transition: 400ms ease;
+
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page.accueil .text .bio > p{
+            opacity: 0;
+            transform: translateX(20px);
+            transition: 200ms ease 500ms;
+
+            /* text-align: justify; */
+            /* font-weight: var(--medium); */
+
+            margin-top: 20px;
+            padding-left: 2px;
+
+            overflow: auto;
+        }
+
+            .page.accueil .text.bio .bio{
+                top: 0%;
+            }
+
+            .page.accueil .text.bio .bio > p{
+                opacity: 1;
+                transform: translateX(0px);
+            }
+
+        .page.accueil .title, .page.accueil .subtitle.one, .page.accueil .button-up{
+            transition: 400ms ease;
+            opacity: 1;
+        }
+
+        .page.accueil .bio .title, .page.accueil .bio .subtitle.one, .page.accueil .bio .button-up{
+            opacity: 0;
+        }
+
+        .page.accueil .title{
+            margin-bottom: 10px;
+        }
+
+        .page.accueil .subtitle{
+            margin-bottom: 10px;
+        }
+
+        .page.accueil .button-up{
+            cursor: pointer;
+            margin-top: 40px;
+        
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            align-self: center;
+        
+            width: max-content;
+        }
+
+        .page.accueil .button-up:hover p{
+            border-bottom: 2px solid var(--color-2);
+        }
+        
+            .page.accueil .button-up p{
+                text-align: center;
+                font-weight: var(--medium);
+        
+                color: var(--color-2);
+            }
+
+            .page.accueil .button-up svg{
+                fill: var(--color-2);
+                width: 20px;
+                height: 20px;
+                margin-left: 8px;
+            }
+
+    /* photo */
+    
+    .page.accueil .photo{
+        margin-left: 100px;
+        padding-top: 100px;
+    }
+
+        .page.accueil .photo img{
+            width: 100%;
+            max-width: 300px;
+            border: 2px solid var(--color-0);
+        }
+
+        .page.accueil .photo .shadow > div{
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            z-index: -1;
+
+            width: 100%;
+            height: 100%;
+
+            border: 2px solid var(--color-main);
+        }
+
+        .page.accueil .photo .button-next{
+            align-self: flex-end;
+            margin-top: 50px;
+        }
+
+        .page.accueil .button-next.media{
+            display: none;
+        }
+
+    /* sub */
+
+    .page.accueil p.sub{
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+
+        font-family: var(--philosopher);
+        font-weight: var(--bold);
+    }
+
+/* media */
+
+@media screen and (max-width: 1020px) {
+
+    .page.accueil{
+        background-image: linear-gradient(to bottom, var(--color-2) 10px, transparent 10px);
+        justify-content: flex-start;
+    }
+
+    .page.accueil > main{
+        max-width: 340px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page.accueil .text{
+        order: 2;
+        max-width: 260px;
+    }
+
+        .page.accueil .text .button-up{
+            margin-top: 10px;
+        }
+
+    .page.accueil .photo{
+        order: 1;
+        align-items: center;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+
+        .page.accueil .photo .shadow{
+            width: 70%;
+        }
+        
+            .page.accueil .photo .shadow > div{
+                top: -20px;
+                left: -20px;
+            }
+
+    .page.accueil .photo .button-next{
+        display: none;
+    }
+
+    .page.accueil .button-next.media{
+        display: flex;
+        order: 3;
+        align-self: center;
+        margin: 60px 0;
+    }
+
+    .page.accueil .sub{
+        display: none;
+    }
+
+}

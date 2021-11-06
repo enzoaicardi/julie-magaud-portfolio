@@ -1,0 +1,142 @@
+
+.page.etudes{
+    align-items: center;
+    justify-content: center;
+}
+
+    .page.etudes > main{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        max-width: 1020px;
+    }
+
+    .page.etudes .progress{
+        flex: 1 0 auto;
+        width: 300px;
+        max-width: 440px;
+        margin-right: 10%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+
+        /* border: 1px solid tomato; */
+    }
+
+        .page.etudes .progress .group{
+            display: flex;
+            flex-direction: column;
+        }
+
+            .page.etudes .progress .group h3{
+                font-family: var(--philosopher);
+                font-weight: var(--bold);
+                font-size: 2.4rem;
+
+                margin-left: 44px;
+            }
+
+            .page.etudes .progress .group .bar{
+                display: flex;
+                align-items: center;
+                margin: 10px 0 0 0;
+                padding-right: 20px;
+            }
+
+                .page.etudes .progress .group .bar svg{
+                    width: 28px;
+                    height: 28px;
+                    margin-right: 16px;
+
+                    fill: var(--color-0);
+                    transform: rotate(-45deg);
+                    opacity: 0;
+                }
+
+                .page.etudes .progress .group .bar.v svg{
+                    transform: rotate(0deg);
+                    opacity: 1;
+
+                    transition: 300ms cubic-bezier(.50,1.85,.25,.70);
+                }
+
+                .page.etudes .progress .group .bar div{
+                    flex: 1 1 auto;
+                    width: 100px;
+                    height: 8px;
+                    border-radius: 4px;
+
+                    background-color: var(--color-3);
+                    background-image: linear-gradient(to right, var(--color-main) 0%, transparent 0%);
+                }
+
+                .page.etudes .progress .group .subtitle.variant{
+                    margin-left: 44px;
+                }
+
+    .page.etudes .resume{
+        flex: 1 1 auto;
+        width: 55%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .page.etudes .resume .subtitle{
+            margin-top: 10px;
+        }
+
+        .page.etudes .resume .p{
+            margin: 50px 0;
+        }
+
+/* media */
+
+@media screen and (max-width: 1020px) {
+
+    .page.page.etudes{
+        justify-content: flex-start;
+    }
+
+    .page.etudes > main{
+        max-width: 300px;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page.etudes > main > div{
+        margin-bottom: 70px;
+    }
+
+    .page.etudes .resume{
+        margin-top: 100px;
+        width: 100%;
+    }
+
+        .page.etudes .resume .p{
+            margin: 70px 0;
+        }
+
+        .page.etudes .resume .button-next{
+            align-self: center;
+        }
+
+    .page.etudes .progress{
+        margin-right: 0;
+        order: 2;
+
+        gap: 50px;
+    }
+
+        .page.etudes .progress .group h3{
+            font-size: 2.2rem;
+        }
+
+        .page.etudes .progress .group .bar{
+            margin: 4px 0 0 0;
+        }
+
+}
