@@ -49,7 +49,7 @@ function crimson(obj){
     function ts(){       time.start = performance.now(); }
 
     function play(v){    if(paused){ paused = false; ts(); pstart = pcurrent = v == null ? pcurrent === (invert?0:1) ? (invert?1:0) : pcurrent : v; animeCallBack(anime); } }
-    function stop(){     jumpTo(invert?0:1); if(paused){ onfinish(pcurrent); } }
+    function stop(){     jumpTo(invert?0:1); if(paused){ paused = false; animeCallBack(anime); }}
     function pause(){    paused = true;}
     function moveTo(v){  paused = true; ts(); pstart = pcurrent = v || 0; animeCallBack(anime); }
     function jumpTo(v){  ts(); pstart = pcurrent = v || 0; }
@@ -58,9 +58,9 @@ function crimson(obj){
     function change(v){
         if(v.duration != null){ ts(); pstart = pcurrent; time.total = v.duration; }
         if(v.progress != null){ jumpTo(v.progress); }
-        if(v.easing){           easing = v.easing; } else { easing ||= 'linear'; }
-        if(v.onfinish){         onfinish = v.onfinish; } else { onfinish ||= function(){}; }
-        if(v.animation){        animation = v.animation; } else { animation ||= function(){}; }
+        if(v.easing){           easing = v.easing; } else { easing || (easing = 'linear'); }
+        if(v.onfinish){         onfinish = v.onfinish; } else { onfinish || (onfinish = function(){}); }
+        if(v.animation){        animation = v.animation; } else { animation || (animation = function(){}); }
     }
 
     function status(){   

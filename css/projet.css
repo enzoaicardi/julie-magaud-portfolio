@@ -7,7 +7,7 @@
 
     .page.projet > main{
         align-items: center;
-        padding-top: 100px;
+        padding: 100px 0;
         max-width: 720px;
     }
     
@@ -97,8 +97,13 @@
             width: 90%;
             text-align: justify;
             margin: 10px 0;
-            text-indent: 40px;
+            /* text-indent: 40px; */
         }
+
+            .page.projet .p span{
+                background-image: linear-gradient(to top, var(--color-main) 7px, transparent 7px);
+                font-weight: var(--regular);
+            }
 
         .page.projet .p.u{
             text-indent: 0px;
@@ -118,6 +123,10 @@
             flex: none;
             width: 100%;
             border-radius: 5px;
+        }
+
+        .page.projet .button-next{
+            margin-top: 70px;
         }
 
 /* media */
@@ -150,7 +159,6 @@
     .page.projet > main{
         width: 100%;
         max-width: 400px;
-        padding-bottom: 64px;
     }
 
     .page.projet .subtitle.variant{
@@ -168,6 +176,10 @@
         border-radius: 0;
         /* transform: scale(2); */
         z-index: 0;
+    }
+
+    .page.projet .button-next{
+        margin: 20px 0 10px 0;
     }
 
 }

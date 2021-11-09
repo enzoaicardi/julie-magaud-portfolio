@@ -23,7 +23,7 @@
     color: var(--color-0);
 }
 
-section.page{
+section.page, nav.menu{
     width: 100%;
     height: auto;
     min-height: 100vh;
@@ -38,11 +38,11 @@ section.page{
     background-color: var(--color-1);
 }
 
-section.page.v{
+section.page.v, nav.menu.v{
     display: flex;
 }
 
-    section.page > main{
+    section.page > main, nav.menu > main{
         display: flex;
         flex-direction: column;
 
@@ -67,16 +67,6 @@ section.page.v{
     font-weight: var(--bold);
     font-size: 6.4rem;
     line-height: 1.1;
-}
-
-@media screen and (max-width: 1020px) {
-    .title{
-        font-size: 4.4rem;
-    }
-
-    section.page > main{
-        width: 90%;
-    }
 }
 
 .subtitle{
@@ -195,8 +185,124 @@ section.page.v{
         height: 2px;
         width: 100%;
         background-color: var(--color-0);
+
+        transition: 200ms ease;
+    }
+
+    .menu-button > div:nth-child(1){
+        transform-origin: top left;
+    }
+    .menu-button.v > div:nth-child(1){
+        transform: rotate(45deg);
+    }
+
+    .menu-button.v > div:nth-child(2){
+        opacity: 0;
+    }
+
+    .menu-button > div:nth-child(3){
+        transform-origin: bottom left;
+    }
+    .menu-button.v > div:nth-child(3){
+        transform: rotate(-45deg);
     }
 
 nav.menu{
+    justify-content: center;
+    align-items: center;
 
+    background-image: radial-gradient(circle at top right, var(--color-1) 130px, var(--color-0) 130px);
+}
+
+    nav.menu main{
+        /* background-color: violet; */
+    }
+
+    nav.menu h1{
+        color: var(--color-1);
+    }
+
+    nav.menu .links{
+        align-self: center;
+        width: 60%;
+        margin-top: 100px;
+        padding: 20px 0px 20px 30px;
+
+        border-left: 4px solid var(--color-main);
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+        nav.menu .links > div{
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        nav.menu .links a{
+            cursor: pointer;
+            font-size: 2.6rem;
+            font-weight: var(--regular);
+            letter-spacing: 1px;
+            margin-right: 20px;
+
+            color: var(--color-1);
+            transition: 200ms ease;
+        }
+
+        nav.menu .links a:hover{
+            margin-left: 20px;
+        }
+
+        nav.menu .links div:nth-child(even) a{
+            color: var(--color-main);
+        }
+
+
+/* media */
+
+@media screen and (max-width: 1020px) {
+    .title{
+        font-size: 4.4rem;
+    }
+
+    section.page > main{
+        width: 90%;
+    }
+
+    nav.menu > main{
+        width: 90%;
+        max-width: 300px;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 100px 0 40px 0;
+    }
+
+    nav.menu .links{
+        border: none;
+        width: 100%;
+        padding: 0px;
+    }
+
+    nav.menu .links div::after{
+        content: "";
+        background-color: var(--color-1);
+        width: auto;
+        flex: 1 1 auto;
+        height: 2px;
+    }
+
+    nav.menu .links div:nth-child(even)::after{
+        background-color: var(--color-main);
+    }
+
+    nav.menu .links a{
+        font-size: 2rem;
+        max-width: 70%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }

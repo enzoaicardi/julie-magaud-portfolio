@@ -1,0 +1,181 @@
+
+.page.passions{
+    align-items: center;
+    justify-content: flex-start;
+}
+
+    .page.passions > main{
+        padding: 100px 0 70px 0;
+    }
+
+    .page.passions .grid{
+        width: 100%;
+        max-width: 1280px;
+        padding: 0 14px;
+        padding-bottom: 100px;
+        height: auto;
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 14px;
+
+        /* background-color: red; */
+    }
+
+        .page.passions .grid div{
+            position: relative;
+            flex: 1 0 auto;
+            width: 480px;
+            height: 480px;
+            /* border: 1px solid black; */
+            border-radius: 5px;
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 25px 35px;
+
+            filter: grayscale(0.1);
+            cursor: pointer;
+        }
+
+        .page.passions .grid div::before{
+            content: "";
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            padding: 20%;
+            top: 0; left: 0;
+            border-radius: inherit;
+            opacity: 0;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* font-style: italic; */
+            line-height: 1.6;
+
+            color: var(--color-1);
+            font-size: 2.6rem;
+            font-weight: var(--regular);
+            font-family: var(--philosopher);
+
+            background-color: rgba(0,0,0,0.5);
+            transition: opacity 400ms ease;
+        }
+
+        .page.passions .grid div:hover::before{
+            opacity: 1;
+        }
+
+            .page.passions .grid div h4{
+                color: var(--color-1);
+                font-size: 1.4rem;
+                margin-bottom: 2px;
+                font-weight: var(--regular);
+                filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+            }
+
+            .page.passions .grid div h3{
+                color: var(--color-1);
+                font-size: 2.4rem;
+                font-weight: var(--medium);
+                filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+            }
+
+        .page.passions .grid .sub-one{
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+
+            flex: 1 0 auto;
+            width: 480px;
+            height: 480px;
+        }
+
+            .page.passions .grid .sub-one div{
+                width: 100%;
+                height: auto;
+                flex: 1 1 auto;
+            }
+
+        /* cells */
+
+        .page.passions .grid .parapente{
+            flex: 1 0 auto;
+            background-image: url("../assets/img/parapente.jpg");
+        }.page.passions .grid .parapente::before{content: "\00ab  Une fois que vous aurez goûté au vol, vous marcherez à jamais les yeux tournés vers le ciel \00bb";}
+
+        .page.passions .grid .gymnastique{
+            flex: 10 0 auto;
+            background-image: url("../assets/img/gym.jpg");
+        }.page.passions .grid .gymnastique::before{content: "Persévérance.";}
+
+        .page.passions .grid .patisserie{
+            flex: 10 0 auto;
+            background-image: url("../assets/img/patisserie.jpg");
+        }
+
+        .page.passions .grid .boxe{
+            flex: 1 0 auto;
+            background-image: url("../assets/img/boxe.jpg");
+        }
+
+        .page.passions .grid .escalade{
+            flex: 1 0 auto;
+            background-image: url("../assets/img/escalade.jpg");
+        }
+
+        .page.passions .grid .lecture{
+            width: 280px;
+            flex: 1 0 auto;
+            background-image: url("../assets/img/lecture.jpg");
+        }
+
+        .page.passions .grid .voyages{
+            width: 280px;
+            flex: 1 0 auto;
+            background-image: url("../assets/img/voyages.jpg");
+        }.page.passions .grid .voyages::before{content: "Curiosité.";}
+
+        .page.passions .grid .couture{
+            flex: 5 0 auto;
+            background-image: url("../assets/img/couture.jpg");
+        }
+
+/* media */
+
+@media screen and (max-width: 1020px) {
+
+    .page.passions main{
+        width: 90%;
+        max-width: 400px;
+        align-items: center;
+    }
+
+    .page.passions .title{
+        text-align: center;
+    }
+
+    .page.passions > .grid{
+        width: 100%;
+    }
+
+        .page.passions .grid div, .page.passions .grid .sub-one{
+            width: 280px;
+            height: 320px;
+        }
+
+        .page.passions .grid div::before{
+            font-size: 2.1rem;
+        }
+
+}
