@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/etudes.css">
     <link rel="stylesheet" href="css/projet.css">
     <link rel="stylesheet" href="css/passions.css">
+    <link rel="stylesheet" href="css/experiences.css">
 
     <link rel="shortcut icon" href="favicon.png" type="image/png">
 
@@ -36,18 +37,18 @@
             <h1 class="title">Navigation</h1>
 
             <section class="links">
-                <div><a>Accueil</a></div>
-                <div><a>Cursus universitaire</a></div>
-                <div><a>Expériences professionnelles</a></div>
-                <div><a>Compétences</a></div>
-                <div><a>Projet professionnel</a></div>
-                <div><a>Centres d’intérêt</a></div>
+                <div onclick="changePage(0);"><a>Accueil</a></div>
+                <div onclick="changePage(1);"><a>Cursus universitaire</a></div>
+                <div onclick="changePage(2);"><a>Expériences professionnelles</a></div>
+                <div onclick="changePage(3);"><a>Compétences</a></div>
+                <div onclick="changePage(4);"><a>Projet professionnel</a></div>
+                <div onclick="changePage(5);"><a>Centres d’intérêt</a></div>
             </section>
         </main>
     </nav>
 
     <!-- page d'accueil -->
-    <section class="page accueil">
+    <section class="page accueil v">
 
         <main>
 
@@ -87,25 +88,152 @@
                     <div></div>
                 </div>
 
-                <a class="button-next">
+                <a class="button-next" onclick="changePage(1);resetBio();">
                     <p>Commencer la visite</p>
                 </a>
 
             </div>
 
-            <a class="button-next media">
+            <a class="button-next media" onclick="changePage(1);resetBio();">
                 <p>Commencer la visite</p>
             </a>
 
         </main>
 
-        <p class="sub">Portfolio.</p>
+        <a class="sub" href="" download>Voir mon CV.</a>
+
+    </section>
+
+    <!-- page cursus universitaire -->
+
+    <section class="page etudes">
+
+        <main>
+
+            <div class="progress">
+
+                <section class="group">
+                    <h3>Licence 1 - Géographie</h3>
+                    <div class="bar">
+                        <svg><use xlink:href="#icon-check"></use></svg>
+                        <div data-percent="100"></div>
+                    </div>
+                    <div class="subtitle variant">
+                        <div></div>
+                        <p>2019 - 2020 (mineure tourisme)</p>
+                    </div>
+                </section>
+
+                <section class="group">
+                    <h3>Licence 2 - Tourisme</h3>
+                    <div class="bar">
+                        <svg><use xlink:href="#icon-check"></use></svg>
+                        <div data-percent="100"></div>
+                    </div>
+                    <div class="subtitle variant">
+                        <div></div>
+                        <p>2020 - 2021</p>
+                    </div>
+                </section>
+
+                <section class="group">
+                    <h3>Licence 3 - Tourisme</h3>
+                    <div class="bar">
+                        <svg><use xlink:href="#icon-play"></use></svg>
+                        <div data-percent="40"></div>
+                    </div>
+                    <div class="subtitle variant">
+                        <div></div>
+                        <p>2021 - 2022</p>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="resume">
+
+                <h1 class="title">Mon parcours</h1>
+                <div class="subtitle">
+                    <div></div>
+                    <p>Cursus universitaire</p>
+                </div>
+
+                <p class="p">J’ai obtenu mon baccalauréat économique et social avec spécialité mathématique en 2019. J’ai ensuite réalisé une première année en Licence de Géographie et aménagement du territoire avec mineur tourisme. J’y ai acquis des notions de cartographie, démographie, géomorphologie et aménagement de territoire.
+                    Suite à ma réorientation en licence de tourisme, j’ai acquis des notions de droit, d’histoire du tourisme, de gestion de projet, d’histoire de l’art, de communication et dans l'utilisation de certains outils numériques.
+                </p>
+
+                <div class="btn">
+                    <a class="button-next" onclick="changePage(2);">
+                        <p>Continuer</p>
+                        <svg><use xlink:href="#icon-arrow_forward"></use></svg>
+                    </a>
+                </div>
+
+            </div>
+
+        </main>
 
     </section>
 
     <!-- page des expériences -->
     
-    <section class="page experiences"></section>
+    <section class="page experiences">
+
+        <main>
+            
+            <h1 class="title">Le tourisme en pratique</h1>
+            
+            <div class="subtitle">
+                <div></div>
+                <p>Expériences professionnelles</p>
+            </div>
+
+            <section>
+
+                <div class="dots">
+                    <div class="line v"></div>
+                    <div class="dot v"></div>
+                    <div class="line v2"></div>
+                    <div class="dot"></div>
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                    <div class="line"></div>
+                </div>
+
+                <article>
+                    <h3>Le rocher Saint-Michel d’Aiguilhe</h3>
+
+                    <div class="subtitle">
+                        <div></div>
+                        <p>Puy-en-Velay (2020 - 2021)</p>
+                    </div>
+
+                    <p class="p">Ce stage de quatre semaines m’a permis de réaliser des missions d’accueil, billetterie, boutique et d’information aux touristes. J’ai participé à la réalisation d’un forum de tourisme, de visites guidées et des premières étapes de préparation d’un projet d’audioguide.</p>
+                
+                    <footer>
+                        <a class="button-next replay">
+                            <svg><use xlink:href="#icon-replay"></use></svg>
+                        </a>
+                        <a class="button-next next">
+                            <p>Suivant</p>
+                            <svg><use xlink:href="#icon-arrow_forward"></use></svg>
+                        </a>
+                    </footer>
+                </article>
+
+                <div class="shadow">
+                    <aside class="img" style="background-image: url('./assets/img/rocher.jpg');"></aside>
+                    <div class="rect"></div>
+                    <div class="circle"></div>
+                </div>
+
+            </section>
+
+        </main>
+
+    </section>
     
     <!-- page des compétences -->
 
@@ -241,7 +369,7 @@
 
             </section>
 
-            <a class="button-next variant">
+            <a class="button-next variant" onclick="changePage(4);">
                 <p>Continuer</p>
                 <svg><use xlink:href="#icon-arrow_forward"></use></svg>
             </a>
@@ -250,72 +378,6 @@
 
     </section>
 
-    <!-- page cursus universitaire -->
-
-    <section class="page etudes">
-
-        <main>
-
-            <div class="progress">
-
-                <section class="group">
-                    <h3>Licence 1 - Géographie</h3>
-                    <div class="bar">
-                        <svg><use xlink:href="#icon-check"></use></svg>
-                        <div data-percent="100"></div>
-                    </div>
-                    <div class="subtitle variant">
-                        <div></div>
-                        <p>2019 - 2020 (mineure tourisme)</p>
-                    </div>
-                </section>
-
-                <section class="group">
-                    <h3>Licence 2 - Tourisme</h3>
-                    <div class="bar">
-                        <svg><use xlink:href="#icon-check"></use></svg>
-                        <div data-percent="100"></div>
-                    </div>
-                    <div class="subtitle variant">
-                        <div></div>
-                        <p>2020 - 2021</p>
-                    </div>
-                </section>
-
-                <section class="group">
-                    <h3>Licence 3 - Tourisme</h3>
-                    <div class="bar">
-                        <svg><use xlink:href="#icon-play"></use></svg>
-                        <div data-percent="20"></div>
-                    </div>
-                    <div class="subtitle variant">
-                        <div></div>
-                        <p>2021 - 2022</p>
-                    </div>
-                </section>
-
-            </div>
-
-            <div class="resume">
-
-                <h1 class="title">Mon parcours</h1>
-                <div class="subtitle">
-                    <div></div>
-                    <p>Cursus universitaire</p>
-                </div>
-
-                <p class="p">Pellentesque dapibus eros nec urna gravida aliquam. Duis urna orci, imperdiet id nisl id, luctus eleifend orci. Duis massa mi, mattis in leo vel, porttitor suscipit nulla. Vivamus lobortis neque risus, vel dictum libero placerat sit amet. Etiam risus massa, tincidunt vel molestie at, fringilla in tortor. Cras tempor leo ut purus mattis, eget lobortis turpis congue. Aliquam et erat gravida, tempus turpis gravida, rhoncus dui. Maecenas faucibus felis a pellentesque scelerisque. Sed eu congue mauris. Nullam at libero eget arcu gravida tempus sed vel lectus. Pellentesque malesuada mi non auctor condimentum. Mauris id rutrum nunc. Ut sed luctus erat. Sed aliquam gravida metus ac venenatis.</p>
-
-                <a class="button-next">
-                    <p>Continuer</p>
-                    <svg><use xlink:href="#icon-arrow_forward"></use></svg>
-                </a>
-
-            </div>
-
-        </main>
-
-    </section>
 
     <!-- page du projet professionnel -->
 
@@ -351,6 +413,14 @@
             <div class="subtitle variant" id="sec-masters">
                 <p>Masters ...</p>
             </div>
+            
+            <p class="p"><span>Patrimoines : valorisation touristique et récréative :</span> Ce master vise à acquérir des compétences en marketing territorial et dans la valorisation du patrimoine dans le cadre des aménagements touristiques et de loisirs. Cette formation contient une polyvalence grâce à une formation pluridisciplinaire dans laquelle je me projette complètement pour étudier et évoluer. Il y a aussi un aspect de développement du tourisme durable qui m’intéresse fortement dû à l’avenir du milieu touristique.
+                <br><br>L’apprentissage de l’aménagement d’espace touristique, sur les acteurs du tourisme, les gestions et la valorisation du territoire regroupe les aspects du tourisme qui m’intéresse en particulier dans le milieu du tourisme. Tous les aspects les plus adaptés à mes aspirations y sont regroupés.                
+            </p>
+
+            <div class="img logo">
+                <img src="assets/img/lyon.png">
+            </div>
 
             <p class="p"><span>Management et design du tourisme en transitions :</span> Ce parcours propose une formation sur les techniques de management et de gestion des structures touristiques. L’objectif est de savoir mettre en place une transition des entreprises touristiques (durable, stratégique et technologique).
                 Cette formation est complète et regroupe les compétences touristiques qui me correspondent. Elles demandent une grande polyvalence par la compréhension globale d’un environnement, la protection de son patrimoine, et le développement d’un tourisme plus durable.
@@ -363,9 +433,9 @@
                 <br><br>C’est un parcours qui correspond à mes attentes dans le domaine touristique, offrant des possibilités de projet avec une innovation permanente et des défis quant aux problématiques soulevées.                
             </p>
 
-            <p class="p"><span>Patrimoines : valorisation touristique et récréative :</span> Ce master vise à acquérir des compétences en marketing territorial et dans la valorisation du patrimoine dans le cadre des aménagements touristiques et de loisirs. Cette formation contient une polyvalence grâce à une formation pluridisciplinaire dans laquelle je me projette complètement pour étudier et évoluer. Il y a aussi un aspect de développement du tourisme durable qui m’intéresse fortement dû à l’avenir du milieu touristique.
-                <br><br>L’apprentissage de l’aménagement d’espace touristique, sur les acteurs du tourisme, les gestions et la valorisation du territoire regroupe les aspects du tourisme qui m’intéresse en particulier dans le milieu du tourisme. Tous les aspects les plus adaptés à mes aspirations y sont regroupés.                
-            </p>
+            <div class="img logo">
+                <img src="assets/img/savoie.png">
+            </div>
 
             <div class="img">
                 <img src="assets/img/office.jpg">
@@ -387,7 +457,7 @@
                 <span>Chargé de mission tourisme durable :</span> J’ai un grand intérêt pour l’évolution durable du tourisme, qui prend de plus en plus de place avec les années. Le chargé de mission tourisme durable à une polyvalence quant aux différentes prestations touristiques dont il participe à la mise en place. Il imagine une nouvelle approche du tourisme en accord avec la problématique de durabilité, tout en ayant un objectif d’attractivité. Cette problématique est primordiale et demande des idées innovantes.
             </p>
 
-            <a class="button-next">
+            <a class="button-next" onclick="changePage(5);">
                 <p>Continuer</p>
                 <svg><use xlink:href="#icon-arrow_forward"></use></svg>
             </a>
@@ -398,7 +468,7 @@
 
     <!-- page centre d'intérêt -->
 
-    <section class="page passions v">
+    <section class="page passions">
 
         <main>
             <h1 class="title">Centres d'intérêt</h1>
@@ -451,10 +521,13 @@
             </div>
         </main>
 
+        <!-- button  onclick="changePage(6);" -->
+
     </section>
 
     <!-- SCRIPTS -->
 
+    <script src="js/beziertofunction.js"></script>
     <script src="js/module.easings.js"></script>
 
     <script src="js/crimson.js"></script>
@@ -464,6 +537,7 @@
     <script src="js/etudes.js"></script>
     <script src="js/projet.js"></script>
     <script src="js/passions.js"></script>
+    <script src="js/experiences.js"></script>
 
     <!-- ICONS -->
 
@@ -480,6 +554,9 @@
             </symbol>
             <symbol id="icon-play" viewBox="0 0 22 28">
                 <path d="M21.625 14.484l-20.75 11.531c-0.484 0.266-0.875 0.031-0.875-0.516v-23c0-0.547 0.391-0.781 0.875-0.516l20.75 11.531c0.484 0.266 0.484 0.703 0 0.969z"></path>
+            </symbol>
+            <symbol id="icon-replay" viewBox="0 0 24 24">
+                <path d="M12 5.016q3.328 0 5.672 2.344t2.344 5.625q0 3.328-2.367 5.672t-5.648 2.344-5.648-2.344-2.367-5.672h2.016q0 2.484 1.758 4.242t4.242 1.758 4.242-1.758 1.758-4.242-1.758-4.242-4.242-1.758v4.031l-5.016-5.016 5.016-5.016v4.031z"></path>
             </symbol>
         </defs>
     </svg>

@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
 /* Roboto & Philosopher */
 
+/* 
+
+- Télécharger mon CV (lien) - a la place de "portfolio" absolute
+- Bio qui s'enleve des qu'on change de page
+- Retour a 0 automatique des changement page pour "experiences" diapo
+- Animations pour la page etudes lorsqu'on arrive dessus
+- Animation boutons next : hover
+> Ajouter page de fin -> Recommencer / Sortir / Me contacter (+ mes mentions)
+
+*/
+
 /* LAYOUT */
 
 :root{
@@ -25,21 +36,34 @@
 
 section.page, nav.menu{
     width: 100%;
-    height: auto;
-    min-height: 100vh;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
 
     /* changer display none après phase test */
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    overflow: auto;
+    
+    display: flex;
     flex: none;
     flex-direction: column;
 
     /* pour fixer les éléments positionnés à l'intérieur */
-    position: relative;
     background-color: var(--color-1);
+    transition: visibility 0ms 500ms, opacity 500ms;
+}
+
+section.page > *{
+    flex: none;
 }
 
 section.page.v, nav.menu.v{
-    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0ms 0ms, opacity 500ms 500ms;
 }
 
     section.page > main, nav.menu > main{
@@ -104,6 +128,7 @@ section.page.v, nav.menu.v{
 
 .button-next{
     cursor: pointer;
+    user-select: none;
 
     display: flex;
     align-items: center;
@@ -114,6 +139,21 @@ section.page.v, nav.menu.v{
     padding: 0 24px;
 
     background-color: var(--color-0);
+    transition: 200ms ease;
+}
+
+/* media transition */
+
+@media screen and (min-width: 1020px) {
+    
+    .button-next:hover{
+        transform: scale(1.1);
+    }
+    
+    .button-next.variant:hover{
+        background-position: 0 0;
+    }
+
 }
 
     .button-next.variant{
@@ -124,10 +164,6 @@ section.page.v, nav.menu.v{
         border: 2px solid var(--color-0);
 
         transition: 400ms ease;
-    }
-
-    .button-next.variant:hover{
-        background-position: 0 0;
     }
 
     .button-next p{
@@ -210,12 +246,24 @@ section.page.v, nav.menu.v{
 nav.menu{
     justify-content: center;
     align-items: center;
+    z-index: 90;
+    background-color: transparent;
 
-    background-image: radial-gradient(circle at top right, var(--color-1) 130px, var(--color-0) 130px);
+    transition: visibility 0ms 1000ms, opacity 0ms 1000ms;
 }
 
-    nav.menu main{
-        /* background-color: violet; */
+nav.menu.v{
+    transition: visibility 0ms 0ms, opacity 0ms 0ms;
+}
+
+    nav.menu > main{
+        opacity: 0;
+        transition: opacity 600ms ease;
+    }
+
+    nav.menu.v > main{
+        opacity: 1;
+        transition: opacity 600ms ease 200ms;
     }
 
     nav.menu h1{

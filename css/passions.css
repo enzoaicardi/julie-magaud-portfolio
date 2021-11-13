@@ -51,7 +51,7 @@
             z-index: 2;
             width: 100%;
             height: 100%;
-            padding: 20%;
+            padding: 0 20%;
             top: 0; left: 0;
             border-radius: inherit;
             opacity: 0;
@@ -109,47 +109,68 @@
 
         /* cells */
 
+        .page.passions .grid div{
+            /* le vrai grid div est au dessus dans le code */
+            transform: scale(0.8);
+            transition: 500ms ease;
+        }
+
+        .page.passions.v .grid div{
+            transform: scale(1);
+            transition: 500ms ease 500ms;
+        }
+
         .page.passions .grid .parapente{
             flex: 1 0 auto;
             background-image: url("../assets/img/parapente.jpg");
-        }.page.passions .grid .parapente::before{content: "\00ab  Une fois que vous aurez goûté au vol, vous marcherez à jamais les yeux tournés vers le ciel \00bb";}
+        }
+        .page.passions .grid .parapente::before{content: "\00ab  Une fois que vous aurez goûté au vol, vous marcherez à jamais les yeux tournés vers le ciel \00bb";}
+        .page.passions .grid .parapente::before{content: "Ambition.";}
 
         .page.passions .grid .gymnastique{
             flex: 10 0 auto;
             background-image: url("../assets/img/gym.jpg");
-        }.page.passions .grid .gymnastique::before{content: "Persévérance.";}
-
+        }
+        .page.passions .grid .gymnastique::before{content: "Persévérance.";}
+        .page.passions .grid .gymnastique::before{content: "\00ab  Ce n'est pas la force, mais la persévérance, qui fait les grandes oeuvres \00bb";}
+        
         .page.passions .grid .patisserie{
             flex: 10 0 auto;
             background-image: url("../assets/img/patisserie.jpg");
         }
-
+        .page.passions .grid .patisserie::before{content: "\00ab  La passion fournit les arguments incontestables pour contourner les obstacles \00bb";}
+        
         .page.passions .grid .boxe{
             flex: 1 0 auto;
             background-image: url("../assets/img/boxe.jpg");
         }
-
+        .page.passions .grid .boxe::before{content: "Réactivité.";}
+        
         .page.passions .grid .escalade{
             flex: 1 0 auto;
             background-image: url("../assets/img/escalade.jpg");
         }
-
+        .page.passions .grid .escalade::before{content: "Capacité d’adaptation.";}
+        
         .page.passions .grid .lecture{
             width: 280px;
             flex: 1 0 auto;
             background-image: url("../assets/img/lecture.jpg");
         }
+        .page.passions .grid .lecture::before{content: "Capacité d'analyse.";}
 
         .page.passions .grid .voyages{
             width: 280px;
             flex: 1 0 auto;
             background-image: url("../assets/img/voyages.jpg");
-        }.page.passions .grid .voyages::before{content: "Curiosité.";}
-
+        }
+        .page.passions .grid .voyages::before{content: "Curiosité.";}
+        
         .page.passions .grid .couture{
             flex: 5 0 auto;
             background-image: url("../assets/img/couture.jpg");
         }
+        .page.passions .grid .couture::before{content: "Autonomie.";}
 
 /* media */
 

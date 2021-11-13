@@ -119,6 +119,11 @@
             justify-content: center; 
         }
         
+        .page.projet .img.logo{
+            width: 200px;
+            margin: 20px 0 30px 0;
+        }
+
         .page.projet img{
             flex: none;
             width: 100%;
@@ -176,6 +181,10 @@
         border-radius: 0;
         /* transform: scale(2); */
         z-index: 0;
+    }
+
+    .page.projet .logo img{
+        width: 100%;
     }
 
     .page.projet .button-next{

@@ -1,5 +1,5 @@
 
-var single = document.querySelectorAll('.page.competences .single');
+var single = $$('.page.competences .single');
 for(var i=0; i<single.length; i++){
     
     let el = single[i];

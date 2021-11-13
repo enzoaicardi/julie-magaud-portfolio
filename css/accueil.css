@@ -23,6 +23,14 @@
         position: relative;
         max-width: 400px;
         overflow: hidden;
+
+        transform: translateX(-100px);
+        transition: 500ms ease;
+    }
+
+    .page.accueil.v .text{
+        transform: translateX(0px);
+        transition: 500ms ease 500ms;
     }
 
         .page.accueil .text .bio{
@@ -33,7 +41,7 @@
             top: 100%;
 
             background-color: var(--color-1);
-            transition: 400ms ease;
+            transition: 0ms;
 
             padding: 20px;
 
@@ -57,6 +65,7 @@
 
             .page.accueil .text.bio .bio{
                 top: 0%;
+                transition: 400ms ease;
             }
 
             .page.accueil .text.bio .bio > p{
@@ -116,6 +125,13 @@
     .page.accueil .photo{
         margin-left: 100px;
         padding-top: 100px;
+        transform: translateX(100px);
+        transition: 500ms ease;
+    }
+
+    .page.accueil.v .photo{
+        transform: translateX(0px);
+        transition: 500ms ease 500ms;
     }
 
         .page.accueil .photo img{
@@ -147,7 +163,7 @@
 
     /* sub */
 
-    .page.accueil p.sub{
+    .page.accueil a.sub{
         position: absolute;
         bottom: 30px;
         left: 30px;
@@ -178,6 +194,11 @@
 
         .page.accueil .text .button-up{
             margin-top: 10px;
+        }
+
+        .page.accueil .text .bio{
+            padding: 0;
+            padding-top: 10px;
         }
 
     .page.accueil .photo{

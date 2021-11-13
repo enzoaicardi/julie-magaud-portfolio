@@ -1,11 +1,10 @@
 
 // biographie qui prend la place du titre
 
-var bio_up = document.querySelector('.page.accueil .text .button-up');
+var bio_up = $('.page.accueil .text .button-up');
+var text_bio = $('.page.accueil .text');
 
 bio_up.addEventListener('click', function(e){
-
-    var text_bio = document.querySelector('.page.accueil .text');
 
     if(text_bio.classList.contains('bio')){
         text_bio.classList.remove('bio');
@@ -14,3 +13,11 @@ bio_up.addEventListener('click', function(e){
     }
 
 }, {passive: true});
+
+function resetBio(){
+    setTimeout(() => {
+        if(text_bio.classList.contains('bio')){
+            text_bio.classList.remove('bio');
+        }
+    }, 500);
+}
