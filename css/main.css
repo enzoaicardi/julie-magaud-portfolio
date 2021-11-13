@@ -302,6 +302,7 @@ nav.menu.v{
 
 .page.end{
     background-color: var(--color-0);
+    height: 100%;
 }
 
     .page.end > main{
