@@ -28,8 +28,12 @@
         .page.etudes .progress .group{
             display: flex;
             flex-direction: column;
+            flex: none;
         }
 
+            .page.etudes .progress .group > *{
+                flex: none;
+            }
             .page.etudes .progress .group h3{
                 font-family: var(--philosopher);
                 font-weight: var(--bold);
@@ -94,7 +98,7 @@
             transition: 300ms ease 500ms;
         }
 
-        .page.etudes.v .resume .subtitle{
+        .page.etudes .resume .subtitle{
             margin-top: 10px;
         }
         .page.etudes.v .resume .subtitle{

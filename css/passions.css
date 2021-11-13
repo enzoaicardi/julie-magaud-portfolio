@@ -172,6 +172,10 @@
         }
         .page.passions .grid .couture::before{content: "Autonomie.";}
 
+    .page.passions .button-next{
+        margin-bottom: 100px;
+    }
+
 /* media */
 
 @media screen and (max-width: 1020px) {

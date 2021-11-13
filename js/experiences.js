@@ -116,7 +116,7 @@ var slider_array = [
         url: "rocher.jpg",
         name: "Le rocher Saint-Michel d’Aiguilhe",
         sub: "Puy-en-Velay (2020 - 2021)",
-        desc: "Ce stage de quatre semaines m’a permis de réaliser des missions d’accueil, billetterie, boutique et d’information aux touristes. J’ai participé à la réalisation d’un forum de tourisme, de visites guidées et des premières étapes de préparation d’un projet d’audioguide."
+        desc: "Ce stage de quatre semaines m’a permis de réaliser des missions d’accueil, billetterie, boutique et d’information aux touristes. J’ai participé à la réalisation d’un forum de tourisme, aux visites guidées et aux premières étapes de préparation d’un projet d’audioguide."
     },
     {
         url: "ecole.jpg",

@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
 /* Roboto & Philosopher */
 
-/* 
-
-- Télécharger mon CV (lien) - a la place de "portfolio" absolute
-- Bio qui s'enleve des qu'on change de page
-- Retour a 0 automatique des changement page pour "experiences" diapo
-- Animations pour la page etudes lorsqu'on arrive dessus
-- Animation boutons next : hover
-> Ajouter page de fin -> Recommencer / Sortir / Me contacter (+ mes mentions)
-
-*/
-
 /* LAYOUT */
 
 :root{
@@ -159,7 +148,7 @@ section.page.v, nav.menu.v{
     .button-next.variant{
         background-image: linear-gradient(to right, var(--color-main) 0%, var(--color-main) 100%);
         background-repeat: no-repeat;
-        background-position: -180px 0;
+        background-position: -280px 0;
         background-color: var(--color-1);
         border: 2px solid var(--color-0);
 
@@ -308,6 +297,104 @@ nav.menu.v{
             color: var(--color-main);
         }
 
+
+/* PAGE END */
+
+.page.end{
+    background-color: var(--color-0);
+}
+
+    .page.end > main{
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: unset;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+        .page.end .controls{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 14vw;
+        }
+
+            .page.end .controls a{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                cursor: pointer;
+            }
+
+            .page.end .controls a h3{
+                font-family: var(--philosopher);
+                font-weight: var(--bold);
+                font-size: 2.4rem;
+                color: var(--color-1);
+            }
+
+            .page.end .controls a svg{
+                fill: var(--color-1);
+                width: 70px;
+                height: 70px;
+                padding: 20px;
+                margin-bottom: 20px;
+
+                border-radius: 50%;
+                border: 2px solid var(--color-1);
+                background-color: transparent;
+
+                transition: 400ms ease;
+            }
+
+            .page.end .controls a:hover svg{
+                background-color: var(--color-1);
+                fill: var(--color-0);
+            }
+
+        .page.end main > .button-next{
+            margin-top: 10vh;
+            background-color: var(--color-0);
+            border: 2px solid var(--color-1);
+            transition: 400ms ease;
+        }
+
+        .page.end main > .button-next:hover{
+            transform: scale(1);
+            background-color: var(--color-1);
+        }
+
+            .page.end .button-next p{
+                transition: 400ms ease;
+                color: var(--color-1);
+            }
+
+            .page.end .button-next:hover p{
+                color: var(--color-0);
+            }
+
+    .page.end > footer{
+        flex: none;
+        width: 100%;
+        height: auto;
+        padding: 10px 20px;
+        padding-top: 0;
+    }
+
+        .page.end > footer p{
+            color: var(--color-2);
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+
+            text-align: center;
+        }
 
 /* media */
 
