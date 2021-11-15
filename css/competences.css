@@ -18,7 +18,7 @@
 
     .page.competences .subtitle{
         margin-top: 60px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .page.competences .group{
@@ -47,12 +47,19 @@
             padding: 0 20px;
 
             background-color: var(--color-0);
+            border-radius: 5px 50px 50px 5px;
 
             display: flex;
             justify-content: space-between;
             align-items: center;
 
             user-select: none;
+            transition: border-radius 200ms ease 900ms;
+        }
+
+        .page.competences .single.v header{
+            border-radius: 5px 5px 0 0;
+            transition: border-radius 200ms ease;
         }
 
             .page.competences .single h3{
@@ -102,11 +109,25 @@
                 border: 2px solid var(--color-0);
                 border-top: none;
                 background-color: var(--color-1);
+                border-radius: 0 0 5px 5px;
 
                 overflow: hidden;
 
                 transition: max-height 1000ms, padding 400ms 600ms, opacity 200ms 800ms;
             }
+
+                .page.competences .single p i{
+                    display: block;
+                    margin-top: 15px;
+                    font-style: unset;
+                    text-align: center;
+                    line-height: 1.4;
+                    color: var(--color-2);
+                }
+
+                .page.competences .single p i a{
+                    text-decoration: underline;
+                }
 
             .page.competences .single.v p{
                 max-height: 500px;

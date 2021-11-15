@@ -6,7 +6,8 @@
 :root{
     background-color: var(--color-1);
 
-    --color-main: #1AE5C3;
+    /* --color-main: #1AE5C3; */
+    --color-main: #ffad50;
     --color-0: #000000;
     --color-1: #ffffff;
     --color-2: #c4c4c4;
